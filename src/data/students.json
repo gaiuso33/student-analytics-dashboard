@@ -1,0 +1,27 @@
+
+[
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "course": "Mathematics",
+    "score": 85,
+    "semester": "Fall",
+    "gpa": 3.7
+  },
+  {
+    "id": 2,
+    "name": "Michael Lee",
+    "course": "Computer Science",
+    "score": 92,
+    "semester": "Fall",
+    "gpa": 3.9
+  },
+  {
+    "id": 3,
+    "name": "Sarah Williams",
+    "course": "Physics",
+    "score": 78,
+    "semester": "Spring",
+    "gpa": 3.3
+  }
+]
