@@ -1,31 +1,57 @@
+import { useState } from "react";
 import students from "../data/students.json";
 import Charts from "./Charts";
 import StudentTable from "./StudentTable";
 import Filters from "./Filters";
 import StatsCards from "./StatsCards";
-import { useState } from "react";
 
 function Dashboard() {
-    const [search, setSearch] = useState("");
 
-    const filteredStudents = students.filter((student) =>
-        student.name.toLowerCase().includes(search.toLowerCase())
-    );
+  const [search, setSearch] = useState("");
 
-    return (
-        <div className="dashboard">
+  const [sortConfig, setSortConfig] = useState({
+    key: null,
+    direction: "asc"
+  });
 
-        <h1>Student Analytics Dashboard</h1>
+  const filteredStudents = students.filter((student) =>
+    student.name.toLowerCase().includes(search.toLowerCase())
+  );
 
-        <StatsCards students={filteredStudents} />
+  const sortedStudents = [...filteredStudents].sort((a, b) => {
 
-        <Filters setSearch={setSearch} />
+    if (!sortConfig.key) return 0;
 
-        <Charts students={filteredStudents} />
+    if (a[sortConfig.key] < b[sortConfig.key]) {
+      return sortConfig.direction === "asc" ? -1 : 1;
+    }
 
-        <StudentTable students={filteredStudents} />
+    if (a[sortConfig.key] > b[sortConfig.key]) {
+      return sortConfig.direction === "asc" ? 1 : -1;
+    }
 
-        </div>
-    );
+    return 0;
+  });
+
+  return (
+    <div className="dashboard">
+
+      <h1>Student Analytics Dashboard</h1>
+
+      <StatsCards students={sortedStudents} />
+
+      <Filters setSearch={setSearch} />
+
+      <Charts students={sortedStudents} />
+
+      <StudentTable
+        students={sortedStudents}
+        sortConfig={sortConfig}
+        setSortConfig={setSortConfig}
+      />
+
+    </div>
+  );
 }
+
 export default Dashboard;
