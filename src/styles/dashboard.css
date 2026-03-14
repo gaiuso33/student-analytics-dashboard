@@ -111,9 +111,28 @@ color:#60a5fa;
 .card{
 background:white;
 padding:20px;
-border-radius:8px;
-width:200px;
-box-shadow:0 2px 6px rgba(0,0,0,0.1);
+border-radius:10px;
+width:220px;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.card-icon{
+font-size:28px;
+}
+
+.card h4{
+margin:0;
+font-size:14px;
+color:#6b7280;
+}
+
+.card p{
+margin:0;
+font-size:22px;
+font-weight:600;
 }
 
 .filters input{
