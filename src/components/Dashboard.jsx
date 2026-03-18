@@ -3,6 +3,8 @@ import Charts from "./Charts";
 import StudentTable from "./StudentTable";
 import Filters from "./Filters";
 import StatsCards from "./StatsCards";
+import Leaderboard from "./Leaderboard";
+import CourseDifficulty from "./CourseDifficulty";
 
 function Dashboard() {
 
@@ -61,6 +63,10 @@ useEffect(() => {
       <h1>Student Analytics Dashboard</h1>
 
       <StatsCards analytics={analytics} />
+
+      <Leaderboard />
+
+      <CourseDifficulty />
 
       <Filters setSearch={setSearch} />
 
