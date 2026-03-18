@@ -5,6 +5,8 @@ import Filters from "./Filters";
 import StatsCards from "./StatsCards";
 import Leaderboard from "./Leaderboard";
 import CourseDifficulty from "./CourseDifficulty";
+import AtRiskStudents from "./AtRiskStudents";
+
 
 function Dashboard() {
 
@@ -67,7 +69,9 @@ useEffect(() => {
       <Leaderboard />
 
       <CourseDifficulty />
-
+      
+      <AtRiskStudents />
+      
       <Filters setSearch={setSearch} />
 
       <Charts students={sortedStudents} />
