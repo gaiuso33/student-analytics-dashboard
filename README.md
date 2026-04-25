@@ -19,29 +19,6 @@ This project provides a clear view of student grades, GPA trends, and overall ac
 
 ##  Technologies Used
 
-- **Frontend:** HTML, CSS, JavaScript  
-- **Charts:** Chart.js / Matplotlib (depending on your implementation)
-- **Backend (if applicable):** Flask / Node.js
-- **Database (optional):** SQLite / MySQL
-
----
-
-## Project Structure
-
-```bash
-student-analytics-dashboard/
-│
-├── static/
-│   ├── css/
-│   ├── js/
-│   └── images/
-│
-├── templates/
-│   ├── index.html
-│   ├── dashboard.html
-│   └── reports.html
-│
-├── app.py (if Flask is used)
-├── requirements.txt (if Python is used)
-├── package.json (if Node.js is used)
-└── README.md
+- **React**
+- **Vite**
+- **JavaScript (ES6+)**
