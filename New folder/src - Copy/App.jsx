@@ -1,5 +1,5 @@
-import Dashboard from "./components/dashboard/Dashboard";
-import Sidebar from "./components/layout/Sidebar";
+import Dashboard from "./components/Dashboard";
+import Sidebar from "./components/Sidebar";
 
 function App() {
     return (

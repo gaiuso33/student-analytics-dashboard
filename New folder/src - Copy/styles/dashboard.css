@@ -43,17 +43,12 @@ grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
 gap:30px;
 margin-bottom:40px;
 }
-.filters select {
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
+
 .chart-card{
 background:white;
 padding:20px;
 border-radius:10px;
 box-shadow:0 2px 8px rgba(0,0,0,0.08);
-width: 100%;
 }
 button {
   border-radius: 8px;
@@ -160,47 +155,6 @@ th, td{
 padding:10px;
 border-bottom:1px solid #ddd;
 text-align:left;
-}
-.pagination {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 15px;
-}
-
-.pagination button {
-  padding: 8px 14px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  background: #222;
-  color: white;
-}
-
-.pagination button:disabled {
-  background: #aaa;
-  cursor: not-allowed;
-}
-.filters input[type="number"] {
-  width: 120px;
-}
-
-.dashboard-actions {
-  margin: 15px 0;
-}
-
-.export-btn {
-  display: inline-block;
-  padding: 10px 16px;
-  background: #222;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-.export-btn:hover {
-  opacity: 0.85;
 }
 
 @media (prefers-color-scheme: light) {
